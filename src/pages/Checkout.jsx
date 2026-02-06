@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import { createOrderFS } from "../firebase/orders";
+import { createOrderAndDecrementStockFS } from "../firebase/orders";
+
 
 const Checkout = () => {
   const { cart, totalPrice, clearCart } = useCart();
@@ -47,7 +48,7 @@ const Checkout = () => {
         total: totalPrice,
       };
 
-      const id = await createOrderFS(newOrder);
+      const id = await createOrderAndDecrementStockFS(newOrder);
       setOrderId(id);
       clearCart();
     } catch (err) {

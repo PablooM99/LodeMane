@@ -1,5 +1,3 @@
-// src/data/products.js
-
 import yerba from "../assets/products/YerbaPlayadito1.png";
 import dulce from "../assets/products/DulceDeLeche.png";
 import queso from "../assets/products/QuesoCremac.png";
