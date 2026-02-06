@@ -34,6 +34,7 @@ body {
 .navbar__brand {
   font-weight: 700;
   font-size: 1.25rem;
+  margin-right: 10px;
 }
 
 .navbar__tagline {
@@ -94,3 +95,67 @@ body {
   margin: 0;
   color: #555;
 }
+
+
+.page { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+.page__title { margin: 0 0 1rem; }
+
+.navbar__brandLink { color: inherit; text-decoration: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+
+.card { background: #fff8ec; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,.06); }
+.card__imgWrapper { height: 160px; display: flex; align-items: center; justify-content: center; background-color: #fff;}
+.card__img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.card__body { padding: 1rem; }
+.card__title { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card__price { margin: 0 0 .25rem; font-weight: 700; }
+.card__meta { margin: 0 0 .75rem; color: #555; font-size: .9rem; }
+.card__btn { display: inline-block; padding: .45rem .7rem; background: #8b4513; color: #fff; border-radius: 999px; text-decoration: none; }
+
+.detail { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1rem; background: #fff8ec; padding: 1rem; border-radius: 12px; }
+.detail__img { width: 100%; border-radius: 10px; object-fit: cover; max-height: 360px; }
+.detail__title { margin: 0 0 .25rem; }
+.detail__price { font-weight: 800; margin: 0 0 .5rem; }
+.detail__desc { margin: 0 0 .5rem; color: #444; }
+.detail__stock { margin: 0 0 1rem; color: #333; }
+
+.counter { display: flex; flex-direction: column; gap: .75rem; max-width: 260px; }
+.counter__controls { display: flex; align-items: center; gap: .5rem; }
+.counter__btn { width: 38px; height: 38px; border-radius: 10px; border: none; cursor: pointer; background: #f0c674; font-weight: 800; }
+.counter__value { min-width: 34px; text-align: center; font-weight: 700; }
+.counter__add { border: none; border-radius: 10px; padding: .6rem .75rem; cursor: pointer; background: #8b4513; color: #fff; font-weight: 700; }
+.counter__add:disabled { opacity: .6; cursor: not-allowed; }
+
+.linkBtn { display: inline-block; margin-top: .75rem; padding: .45rem .7rem; background: #8b4513; color: #fff; border-radius: 999px; text-decoration: none; }
+
+@media (max-width: 800px) {
+  .detail { grid-template-columns: 1fr; }
+}
+
+
+
+.cartList { display: grid; gap: 1rem; }
+.cartSummary { margin-top: 1rem; padding: 1rem; background: #fff8ec; border-radius: 12px; }
+.cartSummary__actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+.cartItem { display: grid; grid-template-columns: 120px 1fr; gap: 1rem; background: #fff8ec; padding: 1rem; border-radius: 12px; }
+.cartItem__img { width: 120px; height: 120px; object-fit: contain; background: #fff; border-radius: 10px; }
+.cartItem__title { margin: 0 0 .25rem; }
+.cartItem__qty input { width: 80px; margin-left: .5rem; }
+.cartItem__stock { margin-left: .75rem; color: #555; font-size: .9rem; }
+
+.btnSecondary { border: none; border-radius: 10px; padding: .6rem .75rem; cursor: pointer; background: #f0c674; font-weight: 700; }
+.btnDanger { border: none; border-radius: 10px; padding: .6rem .75rem; cursor: pointer; background: #b32121; color: #fff; font-weight: 700; }
+
+.checkout { display: grid; gap: .75rem; max-width: 420px; background: #fff8ec; padding: 1rem; border-radius: 12px; }
+.checkout input { width: 100%; padding: .55rem .65rem; border-radius: 10px; border: 1px solid #ddd; }
+.checkout__total { margin: .25rem 0 .75rem; }
+
+.badge { display: inline-block; background: #f0c674; padding: .25rem .55rem; border-radius: 999px; font-weight: 700; }
+.badge--danger { background: #ffb3b3; }
+.badge--ok { background: #bff0c6; }
+
+.orderId { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1.1rem; padding: .6rem .75rem; background: #fff8ec; border-radius: 10px; display: inline-block; }
+
+.linkSimple { display: inline-block; margin-top: .75rem; color: #8b4513; text-decoration: none; }
+.linkSimple:hover { text-decoration: underline; }
